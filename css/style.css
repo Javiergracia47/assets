@@ -1,0 +1,271 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@1,300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@1,100&display=swap');
+
+* {
+    margin: 0%;
+    padding: 0%;
+}
+
+/* Le asigno las areas a mis secciones */
+body {
+  height: 100vh;
+  background-color: black;
+}
+
+@keyframes girarEstrella {
+    0% {
+      transform: rotate(0deg);
+      color: rgb(190, 172, 34);
+    }
+    100% {
+      transform: rotate(360deg);
+      color: yellow;
+    }
+  }
+
+  .estrella {
+    margin-left: 10px;
+    font-size: 3em;
+    display: inline-block;
+    animation: girarEstrella 5s linear infinite; /* ajusta la duración según tus preferencias */
+  }
+
+/* le asigno estilos a mi titulo */
+.titulo h1{
+  font-size: 3em; /* Tamaño de la fuente */
+  text-transform: uppercase; /* Convertir el texto a mayúsculas */
+  letter-spacing: 2px; /* Espaciado entre letras */
+  font-family: 'Arial', sans-serif; /* Tipo de fuente (ajusta según tus preferencias) */
+  text-align: center;
+  margin-bottom: 40px;
+  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: rgb(251, 251, 251);
+  font-weight: 350;
+}
+
+/* display flex al contendor que tiene mi imagen para centrarla */
+.yo-imagen {
+    display: flex;
+    justify-content: center;
+    height: 300px;
+}
+
+/* le defino un tamaño a mi imagen */
+.yo-imagen img {
+    width: 300px;
+    height: auto;
+    border-radius: 10%;
+    
+}
+
+/* aqui aplico estilos a toda la seccion
+sobre mi */
+.sobre-mi {
+    background-color: #000000;
+    padding: 30px;
+    width: auto;
+    margin-bottom: 60px;
+}
+
+/* contenedor que tiene a mis subcajas */
+.container {
+  /* MARGIN */
+    margin-top: 40px;
+    width: auto;
+   display: flex;
+   flex-direction: column;
+}
+
+/* contenedor de mi texto */
+/* contenedor de mi texto */
+.descripcion {
+    display: flex;
+    justify-content: center;
+    text-align: center; /* Centrar el texto */
+    margin-top: 20px; /* Ajustar el margen superior según sea necesario */
+  }
+  
+  .descripcion p {
+    padding: 15px;
+    font-size: 20px;
+    max-width: 400px; /* Ajustar el ancho del contenedor según sea necesario */
+    text-align: justify;
+    text-justify: inter-word;
+    color: white;
+    font-weight: 200;
+    margin-top: 35px;
+    border:  8px dotted rgb(232, 232, 147);
+    letter-spacing: 2px;
+  }
+  
+  .fechas{
+    height: 130px;
+    text-align: center;
+    background-color: rgb(26, 26, 24);
+    padding: 30px;
+  }
+
+  .fechas_titulo h3{
+    font-size: 24px;
+    font-weight: 130px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: rgb(255, 255, 255);
+    letter-spacing: 2px;
+  }
+
+  .fechas__descripcion{
+    font-size: 23px;
+    color: rgb(255, 255, 255);
+    position: relative;
+    top: 30px;
+    letter-spacing: 2px;
+  }
+/* GALERIA */
+.galeria{
+    grid-area: "galeria";
+    margin-bottom: 100px;
+}
+
+/* Le coloco estilos a mi texto galeria */
+.galeria__texto {
+  /* MARGIN */
+    margin-top: 90px;
+    font-size: 22px;
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+    color: rgb(255, 255, 255);
+    letter-spacing: 3px;
+    text-transform:uppercase ;
+
+    /* animacion */
+    animation-name: cambiarcolor;
+    animation-duration: 5s;
+    animation-iteration-count:initial ;
+}
+
+@keyframes cambiarcolor {
+    0% {
+        transform: scale(0.3);
+        color: rgb(252, 252, 253);
+    }
+
+     
+    25%{
+        transform: scale(0.5);
+    }
+
+   50%{
+      transform: scale(0.7);
+      color: #ffffff;
+    }
+
+    75%{
+        transform: scale(0.9);
+    }
+    100% {
+        transform: scale(1);
+        color: rgb(255, 253, 253);
+    }
+}
+
+/* centro mis cartas */
+.galeria__cartas {
+    position: relative;
+    top: 70px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 70px;
+}
+
+/*mis cartas*/
+.carta {
+    padding: 15px;
+    width: 80%;
+    background-color: aliceblue;
+    height: 330px;
+    box-shadow: 3px 3px rgba(115, 111, 111, 0.3);
+    animation-name: moverse;
+    animation-duration: 3s;
+    animation-iteration-count:1;
+}
+
+@keyframes moverse{
+  0%{
+      transform: scale(0.5);
+  }
+  100%{
+      transform: scale(1deg);
+  }
+}
+
+/* la imagen de mi carta */
+.carta img {
+    width: 100%;
+    filter: grayscale(20%);
+}
+
+/* cuando coloco el cursor sobre mi imagen */
+.carta img:hover{
+     transition: all 1s;
+    scale: 1.1;
+    filter: grayscale(0%);
+    border-radius: 10%;
+}
+
+/* el texto de mi carta */
+.texto {
+    text-align: center;
+    margin-top: 10px;
+}
+
+
+.contacto a:hover {
+    color: rgb(0, 195, 255);
+    text-decoration: underline;
+}
+
+.contacto__inspiracion{
+  margin-top: 35px;
+}
+.contacto__texto{
+  font-size: 13px;
+  background-color: #f3f3f7;
+  color: grey;
+  margin-left: 5px;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+@media (min-width:768px) and (max-width:992px){
+ .galeria{
+  margin-left: 60px;
+ }
+
+ .sobre-mi__texto{
+  font-size: 20px;
+ }
+
+ .sobre-mi p{
+  font-size: 24px;
+ }
+
+ .galeria__cartas{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr;
+ }
+}
+
+@media (min-width:993px){
+ .galeria{
+  margin-left: 25px;
+  margin-bottom: 200px;
+ }
+
+ .galeria__cartas{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+ }
+}
