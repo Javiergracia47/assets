@@ -45,8 +45,8 @@ body {
   animation-name: cambiarcolor;
   animation-duration: 5s;
   animation-iteration-count: 3 ;
-}
 
+}
 /* display flex al contendor que tiene mi imagen para centrarla */
 .yo-imagen {
     display: flex;
@@ -147,7 +147,7 @@ sobre mi */
     animation-iteration-count: 3 ;
 }
 
-@keyframes cambiarcolor {
+@keyframes cambiarcolor{
     0% {
         transform: scale(0.3);
         color: rgb(252, 252, 253);
